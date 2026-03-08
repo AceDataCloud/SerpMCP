@@ -161,24 +161,24 @@ Clients connect with their own Bearer token — the server extracts the token fr
 
 ### Search Tools
 
-| Tool | Description |
-|------|-------------|
+| Tool                 | Description                             |
+| -------------------- | --------------------------------------- |
 | `serp_google_search` | Flexible Google search with all options |
-| `serp_google_images` | Search for images |
-| `serp_google_news` | Search for news articles |
-| `serp_google_videos` | Search for videos |
-| `serp_google_places` | Search for local places/businesses |
-| `serp_google_maps` | Search for map locations |
+| `serp_google_images` | Search for images                       |
+| `serp_google_news`   | Search for news articles                |
+| `serp_google_videos` | Search for videos                       |
+| `serp_google_places` | Search for local places/businesses      |
+| `serp_google_maps`   | Search for map locations                |
 
 ### Information Tools
 
-| Tool | Description |
-|------|-------------|
-| `serp_list_search_types` | List available search types |
-| `serp_list_countries` | List country codes for localization |
-| `serp_list_languages` | List language codes for localization |
-| `serp_list_time_ranges` | List time range filter options |
-| `serp_get_usage_guide` | Get comprehensive usage guide |
+| Tool                     | Description                          |
+| ------------------------ | ------------------------------------ |
+| `serp_list_search_types` | List available search types          |
+| `serp_list_countries`    | List country codes for localization  |
+| `serp_list_languages`    | List language codes for localization |
+| `serp_list_time_ranges`  | List time range filter options       |
+| `serp_get_usage_guide`   | Get comprehensive usage guide        |
 
 ## Usage Examples
 
@@ -222,45 +222,45 @@ Claude: I'll search for aurora borealis images.
 
 ### Search Types
 
-| Type | Description |
-|------|-------------|
+| Type     | Description                  |
+| -------- | ---------------------------- |
 | `search` | Regular web search (default) |
-| `images` | Image search |
-| `news` | News articles |
-| `maps` | Map results |
-| `places` | Local businesses |
-| `videos` | Video results |
+| `images` | Image search                 |
+| `news`   | News articles                |
+| `maps`   | Map results                  |
+| `places` | Local businesses             |
+| `videos` | Video results                |
 
 ### Time Range Filters
 
-| Code | Time Range |
-|------|------------|
-| `qdr:h` | Past hour |
-| `qdr:d` | Past day |
-| `qdr:w` | Past week |
+| Code    | Time Range |
+| ------- | ---------- |
+| `qdr:h` | Past hour  |
+| `qdr:d` | Past day   |
+| `qdr:w` | Past week  |
 | `qdr:m` | Past month |
 
 ### Common Country Codes
 
-| Code | Country |
-|------|---------|
-| `us` | United States |
+| Code | Country        |
+| ---- | -------------- |
+| `us` | United States  |
 | `uk` | United Kingdom |
-| `cn` | China |
-| `jp` | Japan |
-| `de` | Germany |
-| `fr` | France |
+| `cn` | China          |
+| `jp` | Japan          |
+| `de` | Germany        |
+| `fr` | France         |
 
 ### Common Language Codes
 
-| Code | Language |
-|------|----------|
-| `en` | English |
+| Code    | Language             |
+| ------- | -------------------- |
+| `en`    | English              |
 | `zh-cn` | Chinese (Simplified) |
-| `ja` | Japanese |
-| `es` | Spanish |
-| `fr` | French |
-| `de` | German |
+| `ja`    | Japanese             |
+| `es`    | Spanish              |
+| `fr`    | French               |
+| `de`    | German               |
 
 ## Response Structure
 
@@ -284,12 +284,12 @@ Claude: I'll search for aurora borealis images.
 
 ### Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `ACEDATACLOUD_API_TOKEN` | API token from AceDataCloud | **Required** |
-| `ACEDATACLOUD_API_BASE_URL` | API base URL | `https://api.acedata.cloud` |
-| `SERP_REQUEST_TIMEOUT` | Request timeout in seconds | `30` |
-| `LOG_LEVEL` | Logging level | `INFO` |
+| Variable                    | Description                 | Default                     |
+| --------------------------- | --------------------------- | --------------------------- |
+| `ACEDATACLOUD_API_TOKEN`    | API token from AceDataCloud | **Required**                |
+| `ACEDATACLOUD_API_BASE_URL` | API base URL                | `https://api.acedata.cloud` |
+| `SERP_REQUEST_TIMEOUT`      | Request timeout in seconds  | `30`                        |
+| `LOG_LEVEL`                 | Logging level               | `INFO`                      |
 
 ### Command Line Options
 
