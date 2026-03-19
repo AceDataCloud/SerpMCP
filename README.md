@@ -1,6 +1,6 @@
 # MCP Serp
 
-<!-- mcp-name: io.github.acedatacloud/mcp-serp -->
+<!-- mcp-name: io.github.AceDataCloud/mcp-serp -->
 
 [![PyPI version](https://img.shields.io/pypi/v/mcp-serp.svg)](https://pypi.org/project/mcp-serp/)
 [![PyPI downloads](https://img.shields.io/pypi/dm/mcp-serp.svg)](https://pypi.org/project/mcp-serp/)
