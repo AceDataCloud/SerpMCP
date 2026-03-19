@@ -160,7 +160,7 @@ Environment Variables:
                 async def __call__(self, scope, receive, send):  # type: ignore[no-untyped-def]
                     if scope["type"] == "http":
                         path = scope.get("path", "")
-                        if path == "/health":
+                        if path == "/health" or path.startswith("/.well-known/"):
                             await self.app(scope, receive, send)
                             return
                         headers = dict(scope.get("headers", []))
@@ -179,6 +179,33 @@ Environment Variables:
             async def health(_request: Request) -> JSONResponse:
                 return JSONResponse({"status": "ok"})
 
+            async def server_card(_request: Request) -> JSONResponse:
+                """MCP Server Card for Smithery and other registries."""
+                return JSONResponse({
+                    "serverInfo": {"name": "MCP Serp"},
+                    "authentication": {"required": True, "schemes": ["bearer"]},
+                    "tools": [
+                    {"name": "serp_google_search", "description": "Search Google for web results"},
+                    {"name": "serp_google_images", "description": "Search Google Images"},
+                    {"name": "serp_google_news", "description": "Search Google News"},
+                    {"name": "serp_google_videos", "description": "Search Google Videos"},
+                    {"name": "serp_google_places", "description": "Search Google Places"},
+                    {"name": "serp_google_maps", "description": "Search Google Maps"},
+                    {"name": "serp_list_search_types", "description": "List available search types"},
+                    {"name": "serp_list_countries", "description": "List supported countries"},
+                    {"name": "serp_list_languages", "description": "List supported languages"},
+                    {"name": "serp_list_time_ranges", "description": "List time range options"},
+                    {"name": "serp_get_usage_guide", "description": "Get API usage guide"}
+                    ],
+                    "prompts": [
+                    {"name": "serp_search_guide", "description": "Guide for search queries"},
+                    {"name": "serp_workflow_examples", "description": "Example workflows"},
+                    {"name": "serp_query_tips", "description": "Tips for better queries"}
+                    ],
+                    "resources": [],
+                })
+
+
             @contextlib.asynccontextmanager
             async def lifespan(_app: Starlette):  # type: ignore[no-untyped-def]
                 async with mcp.session_manager.run():
@@ -191,6 +218,7 @@ Environment Variables:
             app = Starlette(
                 routes=[
                     Route("/health", health),
+                    Route("/.well-known/mcp/server-card.json", server_card),
                     Mount("/", app=mcp.streamable_http_app()),
                 ],
                 lifespan=lifespan,
