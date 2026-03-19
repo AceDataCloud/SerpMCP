@@ -1,5 +1,7 @@
 # MCP Serp
 
+<!-- mcp-name: io.github.acedatacloud/mcp-serp -->
+
 [![PyPI version](https://img.shields.io/pypi/v/mcp-serp.svg)](https://pypi.org/project/mcp-serp/)
 [![PyPI downloads](https://img.shields.io/pypi/dm/mcp-serp.svg)](https://pypi.org/project/mcp-serp/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
