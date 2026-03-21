@@ -31,6 +31,8 @@ spec:
           env:
             - name: MCP_SERVER_URL
               value: "https://serp.mcp.acedata.cloud"
+            - name: ACEDATACLOUD_OAUTH_CLIENT_ID
+              value: "ekU_U8WRxPQosRVrepAUxCMWs1F8bhVbY6h3UEEmzvE"
           resources:
             limits:
               cpu: 500m
