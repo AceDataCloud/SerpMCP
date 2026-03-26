@@ -34,6 +34,12 @@ async def serp_google_search(
             description="Language code for results (e.g., 'en', 'zh-cn', 'fr'). Default is 'en'."
         ),
     ] = None,
+    location: Annotated[
+        str | None,
+        Field(
+            description="Geographic location for search results (e.g., 'Germany', 'Berlin, Germany'). If not specified but country is provided, the location will be auto-derived from the country code."
+        ),
+    ] = None,
     time_range: Annotated[
         str | None,
         Field(
@@ -69,6 +75,9 @@ async def serp_google_search(
             Default is "us".
         language: Language code for results (e.g., "en", "zh-cn", "fr").
             Default is "en".
+        location: Geographic location for search results (e.g., "Germany",
+            "Berlin, Germany"). If not specified but country is provided,
+            the location will be auto-derived from the country code.
         time_range: Time filter for results. Options:
             - "qdr:h": Past hour
             - "qdr:d": Past day
@@ -93,6 +102,8 @@ async def serp_google_search(
             payload["country"] = country
         if language:
             payload["language"] = language
+        if location:
+            payload["location"] = location
         if time_range:
             payload["range"] = time_range
         if number:
@@ -133,6 +144,12 @@ async def serp_google_images(
             description="Language code for results (e.g., 'en', 'zh-cn', 'fr'). Default is 'en'."
         ),
     ] = None,
+    location: Annotated[
+        str | None,
+        Field(
+            description="Geographic location for search results (e.g., 'Germany', 'Berlin, Germany')."
+        ),
+    ] = None,
     number: Annotated[
         int | None,
         Field(
@@ -153,6 +170,7 @@ async def serp_google_images(
         search_type="images",
         country=country,
         language=language,
+        location=location,
         number=number,
         page=page,
     )
@@ -175,6 +193,12 @@ async def serp_google_news(
         str | None,
         Field(
             description="Language code for results (e.g., 'en', 'zh-cn', 'fr'). Default is 'en'."
+        ),
+    ] = None,
+    location: Annotated[
+        str | None,
+        Field(
+            description="Geographic location for search results (e.g., 'Germany', 'Berlin, Germany')."
         ),
     ] = None,
     time_range: Annotated[
@@ -203,6 +227,7 @@ async def serp_google_news(
         search_type="news",
         country=country,
         language=language,
+        location=location,
         time_range=time_range,
         number=number,
         page=page,
@@ -238,6 +263,12 @@ async def serp_google_videos(
         int | None,
         Field(description="Page number for pagination (default: 1)."),
     ] = None,
+    location: Annotated[
+        str | None,
+        Field(
+            description="Geographic location for search results (e.g., 'Germany', 'Berlin, Germany')."
+        ),
+    ] = None,
 ) -> str:
     """Search Google Videos and get video results.
 
@@ -248,6 +279,7 @@ async def serp_google_videos(
         search_type="videos",
         country=country,
         language=language,
+        location=location,
         number=number,
         page=page,
     )
@@ -282,6 +314,12 @@ async def serp_google_places(
         int | None,
         Field(description="Page number for pagination (default: 1)."),
     ] = None,
+    location: Annotated[
+        str | None,
+        Field(
+            description="Geographic location for search results (e.g., 'Germany', 'Berlin, Germany')."
+        ),
+    ] = None,
 ) -> str:
     """Search Google for local places and businesses.
 
@@ -292,6 +330,7 @@ async def serp_google_places(
         search_type="places",
         country=country,
         language=language,
+        location=location,
         number=number,
         page=page,
     )
@@ -326,6 +365,12 @@ async def serp_google_maps(
         int | None,
         Field(description="Page number for pagination (default: 1)."),
     ] = None,
+    location: Annotated[
+        str | None,
+        Field(
+            description="Geographic location for search results (e.g., 'Germany', 'Berlin, Germany')."
+        ),
+    ] = None,
 ) -> str:
     """Search Google Maps for locations.
 
@@ -336,6 +381,7 @@ async def serp_google_maps(
         search_type="maps",
         country=country,
         language=language,
+        location=location,
         number=number,
         page=page,
     )
