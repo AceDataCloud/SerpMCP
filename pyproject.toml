@@ -66,11 +66,11 @@ all = [
 mcp-serp = "main:main"
 
 [project.urls]
-Homepage = "https://github.com/AceDataCloud/mcp-serp"
+Homepage = "https://github.com/AceDataCloud/SerpMCP"
 Documentation = "https://platform.acedata.cloud/documents/44c86226-8eaa-49bf-85f3-1fae8d2e23f1"
-Repository = "https://github.com/AceDataCloud/mcp-serp"
-Issues = "https://github.com/AceDataCloud/mcp-serp/issues"
-Changelog = "https://github.com/AceDataCloud/mcp-serp/blob/main/CHANGELOG.md"
+Repository = "https://github.com/AceDataCloud/SerpMCP"
+Issues = "https://github.com/AceDataCloud/SerpMCP/issues"
+Changelog = "https://github.com/AceDataCloud/SerpMCP/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["hatchling>=1.21.0,<1.30.0"]
