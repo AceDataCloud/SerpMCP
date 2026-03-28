@@ -502,7 +502,7 @@ twine upload dist/*
 ## Project Structure
 
 ```
-MCPSerp/
+SerpMCP/
 ├── core/                   # Core modules
 │   ├── __init__.py
 │   ├── client.py          # HTTP client for SERP API
