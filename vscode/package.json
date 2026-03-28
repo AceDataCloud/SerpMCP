@@ -25,13 +25,13 @@
     "images",
     "news"
   ],
-  "homepage": "https://github.com/AceDataCloud/MCPSerp",
+  "homepage": "https://github.com/AceDataCloud/SerpMCP",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AceDataCloud/MCPSerp"
+    "url": "https://github.com/AceDataCloud/SerpMCP"
   },
   "bugs": {
-    "url": "https://github.com/AceDataCloud/MCPSerp/issues"
+    "url": "https://github.com/AceDataCloud/SerpMCP/issues"
   },
   "contributes": {
     "mcpServers": {

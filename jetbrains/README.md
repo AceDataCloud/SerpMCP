@@ -58,7 +58,7 @@ Connects to the hosted MCP server at `serp.mcp.acedata.cloud`. No local install 
 - [Ace Data Cloud Platform](https://platform.acedata.cloud)
 - [API Documentation](https://docs.acedata.cloud)
 - [PyPI Package](https://pypi.org/project/mcp-serp/)
-- [Source Code](https://github.com/AceDataCloud/MCPSerp)
+- [Source Code](https://github.com/AceDataCloud/SerpMCP)
 
 ## License
 

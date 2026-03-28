@@ -1,4 +1,4 @@
-# Copilot Instructions for MCPSerp
+# Copilot Instructions for SerpMCP
 
 ## Sync from Docs
 
