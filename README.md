@@ -449,8 +449,8 @@ Options:
 
 ```bash
 # Clone repository
-git clone https://github.com/AceDataCloud/mcp-serp.git
-cd mcp-serp
+git clone https://github.com/AceDataCloud/SerpMCP.git
+cd SerpMCP
 
 # Create virtual environment
 python -m venv .venv
